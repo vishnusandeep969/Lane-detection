@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head><meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{% static 'styles/app.css' %}">
+		<title>LANE DETECTION</title>
+    </head>
+    <body>
+		<div id="ram">
+			<h1 style="text-align:center;">LANE DETECTION ...</h1>
+				<form method="post" action="/" enctype="multipart/form-data">
+					{% csrf_token %}
+					<dl>
+						<div class="ravi">
+							<label class="ravi"><h2>Browse and select a video file</h2></label>&nbsp;&nbsp;
+							<input type="file" name="file" autocomplete="off" required>
+						</div>
+					</dl>
+					<p>
+						<input type="submit" action="" value="Upload and Display">
+					</p>
+				</form>
+                
+            
+			{% if filename %}
+				<div>
+					<video class="pixel" autoplay="autoplay" controls="controls" preload="preload">
+						<source src="{{ MEDIA_URL }}/{{ filename }}" type="video/mp4"></source>
+					</video>
+				</div>
+			{% endif %}
+		</div>	
+    </body>
+</html>

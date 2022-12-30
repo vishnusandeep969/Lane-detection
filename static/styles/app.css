@@ -1,0 +1,30 @@
+body{
+    box-sizing: border-box;
+    background-image: url('../images/josh.jpg');
+    background-size: cover;
+    background-position: 5%;
+    color: #fff;
+}
+#ram{
+    /* border: 2px solid red; */
+    width: 85%;
+    height: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+::selection{
+    color:green;
+}
+img{
+    margin-left: 125px;
+}
+
+
+.pixel{
+    position: relative;
+    top: 0;
+    left: 350px;
+    width: 40%;
+    height: 30%;
+}
